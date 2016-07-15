@@ -15,6 +15,8 @@
 		F68B9B2E1D39205400CEBE11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B2C1D39205400CEBE11 /* LaunchScreen.storyboard */; };
 		F68B9B391D39205400CEBE11 /* capstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B381D39205400CEBE11 /* capstoneTests.swift */; };
 		F68B9B441D39205400CEBE11 /* capstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B431D39205400CEBE11 /* capstoneUITests.swift */; };
+		F68B9B531D39257600CEBE11 /* route.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B521D39257600CEBE11 /* route.png */; };
+		F68B9B551D3925CB00CEBE11 /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B541D3925CB00CEBE11 /* qrcode.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F68B9B3F1D39205400CEBE11 /* capstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = capstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68B9B431D39205400CEBE11 /* capstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capstoneUITests.swift; sourceTree = "<group>"; };
 		F68B9B451D39205400CEBE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68B9B521D39257600CEBE11 /* route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route.png; sourceTree = "<group>"; };
+		F68B9B541D3925CB00CEBE11 /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		F68B9B1F1D39205400CEBE11 /* capstone */ = {
 			isa = PBXGroup;
 			children = (
+				F68B9B511D39254A00CEBE11 /* Images */,
 				F68B9B201D39205400CEBE11 /* AppDelegate.swift */,
 				F68B9B221D39205400CEBE11 /* ViewController.swift */,
 				F68B9B241D39205400CEBE11 /* Main.storyboard */,
@@ -126,6 +131,15 @@
 				F68B9B451D39205400CEBE11 /* Info.plist */,
 			);
 			path = capstoneUITests;
+			sourceTree = "<group>";
+		};
+		F68B9B511D39254A00CEBE11 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F68B9B541D3925CB00CEBE11 /* qrcode.png */,
+				F68B9B521D39257600CEBE11 /* route.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,8 @@
 			files = (
 				F68B9B2E1D39205400CEBE11 /* LaunchScreen.storyboard in Resources */,
 				F68B9B2B1D39205400CEBE11 /* Assets.xcassets in Resources */,
+				F68B9B531D39257600CEBE11 /* route.png in Resources */,
+				F68B9B551D3925CB00CEBE11 /* qrcode.png in Resources */,
 				F68B9B261D39205400CEBE11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
