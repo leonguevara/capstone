@@ -17,6 +17,11 @@
 		F68B9B441D39205400CEBE11 /* capstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B431D39205400CEBE11 /* capstoneUITests.swift */; };
 		F68B9B531D39257600CEBE11 /* route.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B521D39257600CEBE11 /* route.png */; };
 		F68B9B551D3925CB00CEBE11 /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B541D3925CB00CEBE11 /* qrcode.png */; };
+		F68B9B571D3928D500CEBE11 /* CatedralTampico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B561D3928D500CEBE11 /* CatedralTampico.jpg */; };
+		F68B9B591D39734000CEBE11 /* MenuCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B581D39733F00CEBE11 /* MenuCellController.swift */; };
+		F68B9B5B1D397F9000CEBE11 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B5A1D397F9000CEBE11 /* calendar.png */; };
+		F68B9B5D1D39814900CEBE11 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B5C1D39814900CEBE11 /* about.png */; };
+		F68B9B5F1D398A9600CEBE11 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B5E1D398A9600CEBE11 /* QRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		F68B9B451D39205400CEBE11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68B9B521D39257600CEBE11 /* route.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = route.png; sourceTree = "<group>"; };
 		F68B9B541D3925CB00CEBE11 /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
+		F68B9B561D3928D500CEBE11 /* CatedralTampico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CatedralTampico.jpg; sourceTree = "<group>"; };
+		F68B9B581D39733F00CEBE11 /* MenuCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellController.swift; sourceTree = "<group>"; };
+		F68B9B5A1D397F9000CEBE11 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		F68B9B5C1D39814900CEBE11 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		F68B9B5E1D398A9600CEBE11 /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +115,14 @@
 			children = (
 				F68B9B511D39254A00CEBE11 /* Images */,
 				F68B9B201D39205400CEBE11 /* AppDelegate.swift */,
+				F68B9B581D39733F00CEBE11 /* MenuCellController.swift */,
 				F68B9B221D39205400CEBE11 /* ViewController.swift */,
 				F68B9B241D39205400CEBE11 /* Main.storyboard */,
 				F68B9B2A1D39205400CEBE11 /* Assets.xcassets */,
 				F68B9B2C1D39205400CEBE11 /* LaunchScreen.storyboard */,
 				F68B9B2F1D39205400CEBE11 /* Info.plist */,
 				F68B9B271D39205400CEBE11 /* capstone.xcdatamodeld */,
+				F68B9B5E1D398A9600CEBE11 /* QRViewController.swift */,
 			);
 			path = capstone;
 			sourceTree = "<group>";
@@ -136,6 +148,9 @@
 		F68B9B511D39254A00CEBE11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F68B9B5C1D39814900CEBE11 /* about.png */,
+				F68B9B5A1D397F9000CEBE11 /* calendar.png */,
+				F68B9B561D3928D500CEBE11 /* CatedralTampico.jpg */,
 				F68B9B541D3925CB00CEBE11 /* qrcode.png */,
 				F68B9B521D39257600CEBE11 /* route.png */,
 			);
@@ -251,6 +266,9 @@
 				F68B9B531D39257600CEBE11 /* route.png in Resources */,
 				F68B9B551D3925CB00CEBE11 /* qrcode.png in Resources */,
 				F68B9B261D39205400CEBE11 /* Main.storyboard in Resources */,
+				F68B9B5B1D397F9000CEBE11 /* calendar.png in Resources */,
+				F68B9B571D3928D500CEBE11 /* CatedralTampico.jpg in Resources */,
+				F68B9B5D1D39814900CEBE11 /* about.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68B9B591D39734000CEBE11 /* MenuCellController.swift in Sources */,
+				F68B9B5F1D398A9600CEBE11 /* QRViewController.swift in Sources */,
 				F68B9B231D39205400CEBE11 /* ViewController.swift in Sources */,
 				F68B9B291D39205400CEBE11 /* capstone.xcdatamodeld in Sources */,
 				F68B9B211D39205400CEBE11 /* AppDelegate.swift in Sources */,
