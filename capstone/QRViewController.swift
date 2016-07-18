@@ -18,6 +18,8 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Lector de códigos QR"
 
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
@@ -85,9 +87,15 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             
             if metadataObj.stringValue != nil {
                 urls = metadataObj.stringValue
-                performSegueWithIdentifier("qrWebSegue", sender: self)
+                let navc = self.navigationController
+                navc?.performSegueWithIdentifier("qrWebSegue", sender: self)
             }
         }
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        captureSession?.startRunning()
+        qrCodeFrameView?.frame = CGRectZero
     }
 
     override func didReceiveMemoryWarning() {

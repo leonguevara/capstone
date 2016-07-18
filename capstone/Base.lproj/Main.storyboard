@@ -163,7 +163,7 @@
                     <navigationItem key="navigationItem" id="1Aj-l8-bsa"/>
                     <connections>
                         <outlet property="mainMenu" destination="3ju-fC-wWz" id="kFB-FX-KlN"/>
-                        <segue destination="Bs0-BH-6og" kind="show" identifier="qrSegue" id="3S2-Bh-tfX"/>
+                        <segue destination="Bk2-0X-tTB" kind="show" identifier="qrSegue" id="3S2-Bh-tfX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -183,13 +183,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="ECc-pl-OK0" kind="show" identifier="qrWebSegue" id="PCJ-sF-VYm"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="lId-7A-kDr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuA-RU-3k2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3489" y="-266"/>
+            <point key="canvasLocation" x="4449" y="-384"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="oyH-D7-g3z">
@@ -211,7 +209,9 @@
                         <constraints>
                             <constraint firstItem="Utz-SR-VOb" firstAttribute="bottom" secondItem="OHV-CG-Lgr" secondAttribute="top" id="K9I-do-O4F"/>
                             <constraint firstItem="Utz-SR-VOb" firstAttribute="leading" secondItem="wiB-2m-jFO" secondAttribute="leading" id="Wo7-iM-GNC"/>
-                            <constraint firstItem="Utz-SR-VOb" firstAttribute="top" secondItem="Klk-0M-cub" secondAttribute="bottom" constant="8" symbolic="YES" id="dJJ-ac-8Zk"/>
+                            <constraint firstItem="Utz-SR-VOb" firstAttribute="top" secondItem="Klk-0M-cub" secondAttribute="bottom" constant="8" symbolic="YES" id="dJJ-ac-8Zk">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="Utz-SR-VOb" secondAttribute="trailing" id="dhQ-c0-9vm"/>
                         </constraints>
                         <variation key="default">
@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CUf-b7-9lS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4338" y="-266"/>
+            <point key="canvasLocation" x="4449" y="292"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="njL-Lg-Tyw">
@@ -262,6 +262,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8i-QA-Owd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1297.5" y="-384"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="2eh-ir-kld">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bk2-0X-tTB" customClass="QRNavigationViewController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z5c-Z8-IMW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ECc-pl-OK0" kind="show" identifier="qrWebSegue" id="fTA-Xf-mFT"/>
+                        <segue destination="Bs0-BH-6og" kind="relationship" relationship="rootViewController" id="dIR-VH-41z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k3o-or-ddq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3489" y="-266"/>
         </scene>
     </scenes>
     <resources>
