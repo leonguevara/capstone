@@ -22,6 +22,7 @@
 		F68B9B5B1D397F9000CEBE11 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B5A1D397F9000CEBE11 /* calendar.png */; };
 		F68B9B5D1D39814900CEBE11 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B5C1D39814900CEBE11 /* about.png */; };
 		F68B9B5F1D398A9600CEBE11 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B5E1D398A9600CEBE11 /* QRViewController.swift */; };
+		F68B9B611D3C777C00CEBE11 /* QRWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B601D3C777C00CEBE11 /* QRWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F68B9B5A1D397F9000CEBE11 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		F68B9B5C1D39814900CEBE11 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
 		F68B9B5E1D398A9600CEBE11 /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		F68B9B601D3C777C00CEBE11 /* QRWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				F68B9B2F1D39205400CEBE11 /* Info.plist */,
 				F68B9B271D39205400CEBE11 /* capstone.xcdatamodeld */,
 				F68B9B5E1D398A9600CEBE11 /* QRViewController.swift */,
+				F68B9B601D3C777C00CEBE11 /* QRWebViewController.swift */,
 			);
 			path = capstone;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68B9B611D3C777C00CEBE11 /* QRWebViewController.swift in Sources */,
 				F68B9B591D39734000CEBE11 /* MenuCellController.swift in Sources */,
 				F68B9B5F1D398A9600CEBE11 /* QRViewController.swift in Sources */,
 				F68B9B231D39205400CEBE11 /* ViewController.swift in Sources */,
@@ -524,6 +528,7 @@
 				F68B9B4A1D39205400CEBE11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F68B9B4B1D39205400CEBE11 /* Build configuration list for PBXNativeTarget "capstoneTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				F68B9B4D1D39205400CEBE11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F68B9B4E1D39205400CEBE11 /* Build configuration list for PBXNativeTarget "capstoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +546,7 @@
 				F68B9B501D39205400CEBE11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

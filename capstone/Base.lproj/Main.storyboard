@@ -57,9 +57,6 @@
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="63" y="20" width="169" height="21"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -238,11 +235,66 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="NgK-wY-mEc" id="dkM-CK-zkR"/>
+                        <segue destination="ECc-pl-OK0" kind="show" identifier="qrWebSegue" id="PCJ-sF-VYm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuA-RU-3k2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3051" y="-230"/>
+            <point key="canvasLocation" x="3489" y="-266"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="oyH-D7-g3z">
+            <objects>
+                <viewController id="ECc-pl-OK0" customClass="QRWebViewController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Klk-0M-cub"/>
+                        <viewControllerLayoutGuide type="bottom" id="OHV-CG-Lgr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wiB-2m-jFO">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utz-SR-VOb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Utz-SR-VOb" firstAttribute="bottom" secondItem="OHV-CG-Lgr" secondAttribute="top" id="K9I-do-O4F"/>
+                            <constraint firstItem="Utz-SR-VOb" firstAttribute="leading" secondItem="wiB-2m-jFO" secondAttribute="leading" id="Wo7-iM-GNC"/>
+                            <constraint firstItem="Utz-SR-VOb" firstAttribute="top" secondItem="Klk-0M-cub" secondAttribute="bottom" constant="8" symbolic="YES" id="dJJ-ac-8Zk"/>
+                            <constraint firstAttribute="trailing" secondItem="Utz-SR-VOb" secondAttribute="trailing" id="dhQ-c0-9vm"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Utz-SR-VOb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="K9I-do-O4F"/>
+                                <exclude reference="Wo7-iM-GNC"/>
+                                <exclude reference="dJJ-ac-8Zk"/>
+                                <exclude reference="dhQ-c0-9vm"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Utz-SR-VOb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="K9I-do-O4F"/>
+                                <include reference="Wo7-iM-GNC"/>
+                                <include reference="dJJ-ac-8Zk"/>
+                                <include reference="dhQ-c0-9vm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Utz-SR-VOb" id="iQw-NJ-sbg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUf-b7-9lS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4338" y="-266"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="njL-Lg-Tyw">

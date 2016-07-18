@@ -16,6 +16,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     var captureSession : AVCaptureSession?
     var videoPreviewLayer : AVCaptureVideoPreviewLayer?
     var qrCodeFrameView : UIView?
+    var urls : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,35 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         }
         
     }
+    
+    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
+        // Check if the metadataObjects array is not nil and it contains at least one object.
+        if metadataObjects == nil || metadataObjects.count == 0 {
+            qrCodeFrameView?.frame = CGRectZero
+            
+            let alert = UIAlertController(title: "Oops", message: "No fue detectado código QR alguno", preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(defaultAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+            //messageLabel.text = "No QR code is detected"
+            return
+        }
+        
+        // Get the metadata object.
+        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        
+        if metadataObj.type == AVMetadataObjectTypeQRCode {
+            // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
+            qrCodeFrameView?.frame = barCodeObject.bounds;
+            
+            if metadataObj.stringValue != nil {
+                urls = metadataObj.stringValue
+                performSegueWithIdentifier("qrWebSegue", sender: self.parentViewController)
+            }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,14 +101,18 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "qrWebSegue") {
+            let vc = segue.destinationViewController as! QRWebViewController
+            self.captureSession?.stopRunning()
+            vc.urls = self.urls
+        }
     }
-    */
 
 }
