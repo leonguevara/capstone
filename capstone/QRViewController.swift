@@ -11,8 +11,6 @@ import AVFoundation
 
 class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-    @IBOutlet weak var cancelButton: UIButton!
-    
     var captureSession : AVCaptureSession?
     var videoPreviewLayer : AVCaptureVideoPreviewLayer?
     var qrCodeFrameView : UIView?
@@ -51,12 +49,9 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             // Initialize QR Code Frame to highlight the QR code
             qrCodeFrameView = UIView()
             qrCodeFrameView?.layer.borderWidth = 3
-            qrCodeFrameView?.layer.borderColor = UIColor.blueColor().CGColor
+            qrCodeFrameView?.layer.borderColor = UIColor.redColor().CGColor
             view.addSubview(qrCodeFrameView!)
             view.bringSubviewToFront(qrCodeFrameView!)
-            
-            // Move the cancel buton to the top of the view
-            view.bringSubviewToFront(cancelButton)
             
             // Start video capture.
             captureSession?.startRunning()

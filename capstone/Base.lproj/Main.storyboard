@@ -181,60 +181,9 @@
                     <view key="view" contentMode="scaleToFill" id="POm-qA-FqX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgK-wY-mEc">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Efw-JZ-AKP"/>
-                                </constraints>
-                                <state key="normal" title="Cancelar"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Efw-JZ-AKP"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Efw-JZ-AKP"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="GeC-so-OIa"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dOM-Oc-Kz8" firstAttribute="top" secondItem="NgK-wY-mEc" secondAttribute="bottom" constant="20" id="cz8-ZV-a9s"/>
-                            <constraint firstItem="NgK-wY-mEc" firstAttribute="leading" secondItem="POm-qA-FqX" secondAttribute="leadingMargin" id="eF5-NA-Tqg"/>
-                            <constraint firstItem="NgK-wY-mEc" firstAttribute="trailing" secondItem="POm-qA-FqX" secondAttribute="trailingMargin" id="iwF-DZ-zeo"/>
-                            <constraint firstItem="NgK-wY-mEc" firstAttribute="centerX" secondItem="POm-qA-FqX" secondAttribute="centerX" id="vKC-qp-o1Y"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="NgK-wY-mEc"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="cz8-ZV-a9s"/>
-                                <exclude reference="eF5-NA-Tqg"/>
-                                <exclude reference="iwF-DZ-zeo"/>
-                                <exclude reference="vKC-qp-o1Y"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="NgK-wY-mEc"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="cz8-ZV-a9s"/>
-                                <include reference="eF5-NA-Tqg"/>
-                                <include reference="iwF-DZ-zeo"/>
-                                <include reference="vKC-qp-o1Y"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="cancelButton" destination="NgK-wY-mEc" id="dkM-CK-zkR"/>
                         <segue destination="ECc-pl-OK0" kind="show" identifier="qrWebSegue" id="PCJ-sF-VYm"/>
                     </connections>
                 </viewController>
@@ -318,7 +267,4 @@
     <resources>
         <image name="CatedralTampico.jpg" width="4552" height="3380"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="GeC-so-OIa"/>
-    </inferredMetricsTieBreakers>
 </document>
