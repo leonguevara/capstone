@@ -61,6 +61,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: UITableViewDelegate Methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //Dependiendo del renglón que elija, es la ruta que seguirá
+        
+        let row = indexPath.row
+        let chosenSegue = menuItems[row]["segue"]
+        
+        if (chosenSegue == "qrSegue") {
+            performSegueWithIdentifier(chosenSegue!, sender: self)
+        }
     }
 }
 

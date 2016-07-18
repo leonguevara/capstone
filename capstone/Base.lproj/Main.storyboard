@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,6 +33,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0Y-o8-6Wl" id="5Z8-Do-a1f">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OTl-dh-SfT">
@@ -55,6 +57,9 @@
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="63" y="20" width="169" height="21"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -71,12 +76,12 @@
                                                     <exclude reference="KbD-a8-u1m"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="TxD-3A-ICw"/>
+                                                    <exclude reference="lRm-d4-r4M"/>
                                                     <exclude reference="2UC-bs-ac3"/>
                                                     <exclude reference="baQ-NX-f0l"/>
                                                     <exclude reference="qZ7-O5-4Sb"/>
                                                     <exclude reference="yZ8-hD-K1p"/>
-                                                    <exclude reference="TxD-3A-ICw"/>
-                                                    <exclude reference="lRm-d4-r4M"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -85,12 +90,12 @@
                                                     <include reference="KbD-a8-u1m"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="TxD-3A-ICw"/>
+                                                    <include reference="lRm-d4-r4M"/>
                                                     <include reference="2UC-bs-ac3"/>
                                                     <include reference="baQ-NX-f0l"/>
                                                     <include reference="qZ7-O5-4Sb"/>
                                                     <include reference="yZ8-hD-K1p"/>
-                                                    <include reference="TxD-3A-ICw"/>
-                                                    <include reference="lRm-d4-r4M"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -131,14 +136,14 @@
                                 <exclude reference="3ju-fC-wWz"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="8r2-TV-tzI"/>
+                                <exclude reference="TWv-4I-rR0"/>
+                                <exclude reference="fMU-fO-R8t"/>
+                                <exclude reference="qYd-A3-wab"/>
                                 <exclude reference="1vs-HZ-2hM"/>
                                 <exclude reference="CHp-gp-xWQ"/>
                                 <exclude reference="HSg-VQ-ndW"/>
                                 <exclude reference="lYa-jq-bsl"/>
-                                <exclude reference="TWv-4I-rR0"/>
-                                <exclude reference="fMU-fO-R8t"/>
-                                <exclude reference="qYd-A3-wab"/>
-                                <exclude reference="8r2-TV-tzI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -147,14 +152,14 @@
                                 <include reference="3ju-fC-wWz"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="8r2-TV-tzI"/>
+                                <include reference="TWv-4I-rR0"/>
+                                <include reference="fMU-fO-R8t"/>
+                                <include reference="qYd-A3-wab"/>
                                 <include reference="1vs-HZ-2hM"/>
                                 <include reference="CHp-gp-xWQ"/>
                                 <include reference="HSg-VQ-ndW"/>
                                 <include reference="lYa-jq-bsl"/>
-                                <include reference="TWv-4I-rR0"/>
-                                <include reference="fMU-fO-R8t"/>
-                                <include reference="qYd-A3-wab"/>
-                                <include reference="8r2-TV-tzI"/>
                             </mask>
                         </variation>
                     </view>
@@ -177,6 +182,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dOM-Oc-Kz8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="POm-qA-FqX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgK-wY-mEc">
@@ -195,6 +201,9 @@
                                         <include reference="Efw-JZ-AKP"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="GeC-so-OIa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -209,10 +218,10 @@
                                 <exclude reference="NgK-wY-mEc"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="cz8-ZV-a9s"/>
                                 <exclude reference="eF5-NA-Tqg"/>
                                 <exclude reference="iwF-DZ-zeo"/>
                                 <exclude reference="vKC-qp-o1Y"/>
-                                <exclude reference="cz8-ZV-a9s"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -220,10 +229,10 @@
                                 <include reference="NgK-wY-mEc"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="cz8-ZV-a9s"/>
                                 <include reference="eF5-NA-Tqg"/>
                                 <include reference="iwF-DZ-zeo"/>
                                 <include reference="vKC-qp-o1Y"/>
-                                <include reference="cz8-ZV-a9s"/>
                             </mask>
                         </variation>
                     </view>
@@ -257,4 +266,7 @@
     <resources>
         <image name="CatedralTampico.jpg" width="4552" height="3380"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GeC-so-OIa"/>
+    </inferredMetricsTieBreakers>
 </document>
