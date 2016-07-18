@@ -90,7 +90,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             
             if metadataObj.stringValue != nil {
                 urls = metadataObj.stringValue
-                performSegueWithIdentifier("qrWebSegue", sender: self.parentViewController)
+                performSegueWithIdentifier("qrWebSegue", sender: self)
             }
         }
     }
