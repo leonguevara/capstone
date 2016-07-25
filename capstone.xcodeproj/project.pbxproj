@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F62A5CCA1D3E9A1300198482 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A5CC61D3E9A1300198482 /* Place.swift */; };
+		F62A5CCB1D3E9A1300198482 /* Route+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A5CC71D3E9A1300198482 /* Route+CoreDataProperties.swift */; };
+		F62A5CCC1D3E9A1300198482 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A5CC81D3E9A1300198482 /* Route.swift */; };
+		F62A5CD01D4115E500198482 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A5CCF1D4115E500198482 /* MapViewController.swift */; };
+		F62A5CD21D4116D900198482 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62A5CD11D4116D900198482 /* CoreLocation.framework */; };
+		F62A5CD61D412FF700198482 /* Place+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A5CD51D412FF700198482 /* Place+CoreDataProperties.swift */; };
 		F68B9B211D39205400CEBE11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B201D39205400CEBE11 /* AppDelegate.swift */; };
 		F68B9B231D39205400CEBE11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68B9B221D39205400CEBE11 /* ViewController.swift */; };
 		F68B9B261D39205400CEBE11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68B9B241D39205400CEBE11 /* Main.storyboard */; };
@@ -44,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F62A5CC61D3E9A1300198482 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = ../Place.swift; sourceTree = "<group>"; };
+		F62A5CC71D3E9A1300198482 /* Route+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Route+CoreDataProperties.swift"; path = "../Route+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F62A5CC81D3E9A1300198482 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = ../Route.swift; sourceTree = "<group>"; };
+		F62A5CCF1D4115E500198482 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F62A5CD11D4116D900198482 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F62A5CD51D412FF700198482 /* Place+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Place+CoreDataProperties.swift"; path = "../Place+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F68B9B1D1D39205300CEBE11 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68B9B201D39205400CEBE11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F68B9B221D39205400CEBE11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62A5CD21D4116D900198482 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +107,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F62A5CCD1D3E9A2D00198482 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F68B9B581D39733F00CEBE11 /* MenuCellController.swift */,
+				F68B9B221D39205400CEBE11 /* ViewController.swift */,
+				F68B9B5E1D398A9600CEBE11 /* QRViewController.swift */,
+				F68B9B601D3C777C00CEBE11 /* QRWebViewController.swift */,
+				F68B9B621D3D289100CEBE11 /* QRNavigationViewController.swift */,
+				F62A5CCF1D4115E500198482 /* MapViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F62A5CCE1D3E9A5400198482 /* Managed Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F62A5CD51D412FF700198482 /* Place+CoreDataProperties.swift */,
+				F62A5CC61D3E9A1300198482 /* Place.swift */,
+				F62A5CC71D3E9A1300198482 /* Route+CoreDataProperties.swift */,
+				F62A5CC81D3E9A1300198482 /* Route.swift */,
+			);
+			name = "Managed Objects";
+			sourceTree = "<group>";
+		};
 		F68B9B141D39205300CEBE11 = {
 			isa = PBXGroup;
 			children = (
+				F62A5CD11D4116D900198482 /* CoreLocation.framework */,
 				F68B9B1F1D39205400CEBE11 /* capstone */,
 				F68B9B371D39205400CEBE11 /* capstoneTests */,
 				F68B9B421D39205400CEBE11 /* capstoneUITests */,
@@ -117,18 +155,15 @@
 		F68B9B1F1D39205400CEBE11 /* capstone */ = {
 			isa = PBXGroup;
 			children = (
+				F62A5CCE1D3E9A5400198482 /* Managed Objects */,
 				F68B9B511D39254A00CEBE11 /* Images */,
+				F62A5CCD1D3E9A2D00198482 /* ViewControllers */,
 				F68B9B201D39205400CEBE11 /* AppDelegate.swift */,
-				F68B9B581D39733F00CEBE11 /* MenuCellController.swift */,
-				F68B9B221D39205400CEBE11 /* ViewController.swift */,
 				F68B9B241D39205400CEBE11 /* Main.storyboard */,
 				F68B9B2A1D39205400CEBE11 /* Assets.xcassets */,
 				F68B9B2C1D39205400CEBE11 /* LaunchScreen.storyboard */,
 				F68B9B2F1D39205400CEBE11 /* Info.plist */,
 				F68B9B271D39205400CEBE11 /* capstone.xcdatamodeld */,
-				F68B9B5E1D398A9600CEBE11 /* QRViewController.swift */,
-				F68B9B601D3C777C00CEBE11 /* QRWebViewController.swift */,
-				F68B9B621D3D289100CEBE11 /* QRNavigationViewController.swift */,
 			);
 			path = capstone;
 			sourceTree = "<group>";
@@ -300,10 +335,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68B9B611D3C777C00CEBE11 /* QRWebViewController.swift in Sources */,
+				F62A5CD61D412FF700198482 /* Place+CoreDataProperties.swift in Sources */,
+				F62A5CCB1D3E9A1300198482 /* Route+CoreDataProperties.swift in Sources */,
+				F62A5CCC1D3E9A1300198482 /* Route.swift in Sources */,
 				F68B9B591D39734000CEBE11 /* MenuCellController.swift in Sources */,
 				F68B9B5F1D398A9600CEBE11 /* QRViewController.swift in Sources */,
 				F68B9B231D39205400CEBE11 /* ViewController.swift in Sources */,
+				F62A5CD01D4115E500198482 /* MapViewController.swift in Sources */,
 				F68B9B291D39205400CEBE11 /* capstone.xcdatamodeld in Sources */,
+				F62A5CCA1D3E9A1300198482 /* Place.swift in Sources */,
 				F68B9B211D39205400CEBE11 /* AppDelegate.swift in Sources */,
 				F68B9B631D3D289100CEBE11 /* QRNavigationViewController.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OMn-Tx-pkM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OMn-Tx-pkM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,83 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="6Du-xx-8Ev">
+            <objects>
+                <viewController id="vm4-EC-nbS" customClass="MapViewController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0L4-Os-uaL"/>
+                        <viewControllerLayoutGuide type="bottom" id="F5l-Ec-IK5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JQv-yW-GEW">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PD-95-16B">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="QR" style="plain" id="J3M-Fk-okZ">
+                                        <connections>
+                                            <action selector="readQRCodes:" destination="vm4-EC-nbS" id="S9K-Dh-DId"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="uQi-FH-UGh"/>
+                                    <barButtonItem title="Rutas" id="xiL-L1-YL4"/>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rvk-s0-yeZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rvk-s0-yeZ" firstAttribute="trailing" secondItem="7PD-95-16B" secondAttribute="trailing" id="Hmu-HA-AdM"/>
+                            <constraint firstItem="7PD-95-16B" firstAttribute="bottom" secondItem="F5l-Ec-IK5" secondAttribute="top" id="KjT-Dh-Ua3"/>
+                            <constraint firstAttribute="trailing" secondItem="7PD-95-16B" secondAttribute="trailing" id="Po7-xr-5od"/>
+                            <constraint firstItem="Rvk-s0-yeZ" firstAttribute="bottom" secondItem="7PD-95-16B" secondAttribute="top" id="VdD-cr-qlu"/>
+                            <constraint firstItem="7PD-95-16B" firstAttribute="leading" secondItem="JQv-yW-GEW" secondAttribute="leading" id="gZV-FB-a4B"/>
+                            <constraint firstItem="Rvk-s0-yeZ" firstAttribute="leading" secondItem="7PD-95-16B" secondAttribute="leading" id="hbn-LD-pY6"/>
+                            <constraint firstItem="Rvk-s0-yeZ" firstAttribute="top" secondItem="0L4-Os-uaL" secondAttribute="bottom" id="vJE-r9-mzo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7PD-95-16B"/>
+                                <exclude reference="Rvk-s0-yeZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Hmu-HA-AdM"/>
+                                <exclude reference="VdD-cr-qlu"/>
+                                <exclude reference="hbn-LD-pY6"/>
+                                <exclude reference="vJE-r9-mzo"/>
+                                <exclude reference="KjT-Dh-Ua3"/>
+                                <exclude reference="Po7-xr-5od"/>
+                                <exclude reference="gZV-FB-a4B"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7PD-95-16B"/>
+                                <include reference="Rvk-s0-yeZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Hmu-HA-AdM"/>
+                                <include reference="VdD-cr-qlu"/>
+                                <include reference="hbn-LD-pY6"/>
+                                <include reference="vJE-r9-mzo"/>
+                                <include reference="KjT-Dh-Ua3"/>
+                                <include reference="Po7-xr-5od"/>
+                                <include reference="gZV-FB-a4B"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="Rvk-s0-yeZ" id="AYz-dq-8KT"/>
+                        <segue destination="Bk2-0X-tTB" kind="show" identifier="qrSegue2" id="99q-VP-Hh2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ae4-Y0-kI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3079.5" y="-1063"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -164,13 +241,14 @@
                     <connections>
                         <outlet property="mainMenu" destination="3ju-fC-wWz" id="kFB-FX-KlN"/>
                         <segue destination="Bk2-0X-tTB" kind="show" identifier="qrSegue" id="3S2-Bh-tfX"/>
+                        <segue destination="vm4-EC-nbS" kind="show" identifier="mapSegue" id="8ld-8u-8O6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2215.5" y="-384"/>
         </scene>
-        <!--View Controller-->
+        <!--Lector de Códigos QR-->
         <scene sceneID="HHM-6u-EuK">
             <objects>
                 <viewController id="Bs0-BH-6og" customClass="QRViewController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
@@ -183,7 +261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lId-7A-kDr"/>
+                    <navigationItem key="navigationItem" title="Lector de Códigos QR" id="lId-7A-kDr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuA-RU-3k2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,6 +276,7 @@
                         <viewControllerLayoutGuide type="bottom" id="OHV-CG-Lgr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wiB-2m-jFO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utz-SR-VOb">
@@ -286,4 +365,7 @@
     <resources>
         <image name="CatedralTampico.jpg" width="4552" height="3380"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="99q-VP-Hh2"/>
+    </inferredMetricsTieBreakers>
 </document>
